@@ -21,7 +21,15 @@ function searchAddressHandler(event: Event) {
       }
       const lat = response.data.results[0].geometry.location.lat;
       const lng = response.data.results[0].geometry.location.lng;
-      console.log(lat, lng);
+      const map = new google.maps.Map(document.getElementById("map")!, {
+        center: { lat: lat, lng: lng },
+        zoom: 16,
+      });
+      // The marker, positioned at Uluru
+      new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: map,
+      });
     })
     .catch(err => {
       if (err) {

@@ -22,6 +22,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "@types/googlemaps": "^3.43.3",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0"
   }
